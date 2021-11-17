@@ -4,7 +4,7 @@ const mongojs = require('mongojs')
 
 const PORT = process.env.PORT || 3000
 
-const dbConnection = process.env.ATLAS || "dogs"
+const dbConnection = process.env.ATLAS_DOG || "dogs"
 
 const db = mongojs(dbConnection, ['dogs'])
 
