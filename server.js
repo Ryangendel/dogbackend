@@ -22,6 +22,13 @@ app.get("/", (req, res)=>{
     })  
 })
 
+app.get("/addsomedata", (req, res)=>{
+    db.dogs.insert({name:"skadi", breed:"bulldog", age:3}, (err, data)=>{
+        console.log("_______")
+        res.json(data)
+    })  
+})
+
 app.listen(PORT, ()=>{
     console.log("listening on port :" + PORT )
 })
